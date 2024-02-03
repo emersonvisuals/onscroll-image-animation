@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "./CustomImage.module.css";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface CustomImageProps {
-    imageSource: string;
+    imageSource: string | StaticImageData; // Accept string or StaticImageData
     imageStyle: React.CSSProperties;
 }
 
@@ -11,6 +11,8 @@ const CustomImage: React.FC<CustomImageProps> = ({
     imageSource,
     imageStyle,
 }) => {
+    const src = typeof imageSource === "string" ? imageSource : imageSource.src;
+
     return (
         <Image
             className={styles.image}
