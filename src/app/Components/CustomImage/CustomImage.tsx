@@ -3,7 +3,7 @@ import styles from "./CustomImage.module.css";
 import Image from "next/image";
 
 interface CustomImageProps {
-    imageSource: string | StaticImageData;
+    imageSource: string;
     imageStyle: React.CSSProperties;
 }
 
