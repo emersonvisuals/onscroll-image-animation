@@ -9,7 +9,7 @@ const Header = () => {
             <h1>image scroll effects</h1>
             <div className={Styles.tag}>
                 <p>please scroll</p>
-                <Image className={Styles.img} src={Arrow}></Image>
+                <Image className={Styles.img} src={Arrow} alt="arrow"></Image>
             </div>
         </main>
     );
